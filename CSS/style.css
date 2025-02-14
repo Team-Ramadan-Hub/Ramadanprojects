@@ -10,8 +10,9 @@
     --Lightgreen: #EFF8F5;
     --white:  #fff;
     --black:  #000;
-    --green: #295848;
+    --green: #2E7D32;
    --dark-green: #293C36;
+   --second-green: #209B6F;
 
 
 }
@@ -98,3 +99,170 @@ p {
 }
 
 /* End of  Essentional Features Section */
+/* verse */
+
+.verse h2{
+    color:var(--black);
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    
+    
+
+}
+
+.verse h3{
+  font-size: 14px;
+  font-weight: 300;
+  color: gray;
+  text-align: center;
+  padding-top: 8px;
+  margin-bottom: 15px;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+.one{
+    background-color:var(--second-green);
+    color:var(--white);
+    border: 1px solid var(--second-green);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+
+    
+}
+.one i{
+    margin-right: 8px;
+}
+
+.two{
+    background-color: transparent;
+    color:var(--second-green);
+    border: 1px solid var(--second-green);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;cursor: pointer;
+
+
+}
+
+.two i{
+    margin-right: 8px;
+}
+
+.name {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.name h2{
+    color: var(--second-green);
+    font-weight: 100;
+    margin-bottom: 8px;
+}
+.name p{
+    color: gray;
+}
+ 
+/* Prayer Times Section */
+
+.prayer-times {
+    background-color: var(--Lightgreen);
+    text-align: center;
+    padding: 30px 10px;
+    margin: auto;
+    gap: 20px;
+}
+
+.prayer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 10px;
+    max-width: 800px;
+    margin: auto;
+    flex-wrap: nowrap;
+}
+
+.prayer-box {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 100px;
+}
+
+.next-prayer-box {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+}
+
+.prayer-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 100px;
+}
+
+.prayer-item {
+    flex: 1 1 45%; /* Ensures wrapping from the start */
+    min-width: 120px; /* Prevents items from shrinking too much */
+    text-align: center;
+    background-color: var(--Lightgreen);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prayer-name {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--black);
+}
+
+.prayer-time {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 16px;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.next-prayer-box h3 {
+    margin-bottom: 10px;
+}
+
+.next-prayer-time {
+    font-size: 24px;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 5px;
+    background-color: var(--green);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
