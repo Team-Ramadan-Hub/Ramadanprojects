@@ -12,7 +12,79 @@
     --black:  #000;
     --green: #295848;
    --dark-green: #293C36;
+   --second-green: #209B6F;
 
 
 }
- 
+
+/* verse */
+
+.verse h2{
+    color:var(--black);
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    
+    
+
+}
+
+.verse h3{
+  font-size: 14px;
+  font-weight: 300;
+  color: gray;
+  text-align: center;
+  padding-top: 8px;
+  margin-bottom: 15px;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+.one{
+    background-color:var(--second-green);
+    color:var(--white);
+    border: 1px solid var(--second-green);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+
+    
+}
+.one i{
+    margin-right: 8px;
+}
+
+.two{
+    background-color: transparent;
+    color:var(--second-green);
+    border: 1px solid var(--second-green);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;cursor: pointer;
+
+
+}
+
+.two i{
+    margin-right: 8px;
+}
+
+.name {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.name h2{
+    color: var(--second-green);
+    font-weight: 100;
+    margin-bottom: 8px;
+}
+.name p{
+    color: gray;
+}
