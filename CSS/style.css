@@ -16,6 +16,65 @@
 
 
 }
+/*Hero section*/
+section{
+    display: flex;
+    flex-direction: row;
+    background-color:var(--Lightgreen);
+    justify-content:space-between;
+  max-width: 1500px;
+   height: 550px;
+   align-items: center;
+   margin-left: 15px;
+   margin-right: 15px;
+   margin-top: 25px;
+   
+   
+}
+.hero-content{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+
+}
+
+.hero-content h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+.hero-content p{
+    font-size: 16px;
+    color: var(--black);
+}
+ .pri-button, .secon-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.pri-button {
+    background-color: var(--green);
+    color: var(--Lightgreen);
+}
+
+.secon-button {
+    background-color: transparent;
+    border: 2px solid var(--dark-green);
+    color: var(--dark-green);
+}
+
+
+.image img{
+    max-width: 1500;
+        height: 550px;
+        align-items: center;
+        
+        
+} 
 
 /* Start of Essentional Features Section */
 .content-section {
