@@ -1,4 +1,5 @@
 *{
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,6 +27,10 @@
     gap: 20px;
 }
 
+.prayer-times h3 {
+    margin-bottom: 10px;
+}
+
 .prayer-container {
     display: flex;
     justify-content: center;
@@ -38,11 +43,11 @@
 
 .prayer-box {
     background: var(--white);
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
-    min-width: 100px;
+    min-width: 200px;
 }
 
 .next-prayer-box {
@@ -51,35 +56,30 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
-    min-width: 200px;
+    min-width: 100px;
 }
 
 .prayer-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
     background: var(--white);
-    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
-    min-width: 100px;
 }
 
 .prayer-item {
-    flex: 1 1 45%; /* Ensures wrapping from the start */
-    min-width: 120px; /* Prevents items from shrinking too much */
-    text-align: center;
     background-color: var(--Lightgreen);
-    padding: 10px;
+    padding-left: 16.5px;
+    padding-right: 16.5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 5px;
 }
 
 .prayer-name {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     font-size: 12px;
     color: var(--black);
 }
@@ -94,6 +94,11 @@
 }
 
 .next-prayer-box h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.next-prayer-box p {
     margin-bottom: 10px;
 }
 
@@ -103,11 +108,104 @@
     font-weight: bold;
 }
 
-.loading-bar {
+.loading-bar-container {
+    margin-top: 10px;
     width: 100%;
     height: 5px;
-    background-color: var(--green);
-    margin-top: 10px;
+    background-color: #ccc; /* Light black or grey background for the empty part */
     border-radius: 5px;
+    overflow: hidden; /* Prevents content from overflowing */
+    position: relative;
 }
 
+.loading-bar {
+    height: 100%;
+    width: 100%;
+    background-color: var(--green); /* Green color for the filled part */
+    transition: width 1s linear; /* Smooth animation */
+}
+
+/* Added media query to maintain responsive webpage*/
+
+@media screen and (max-width: 600px) {
+    .prayer-item {
+        background-color: var(--Lightgreen);
+        padding-left: 11px;
+        padding-right: 11px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+    }
+    
+    .prayer-name {
+        font-size: 7px;
+        color: var(--black);
+    }
+    
+    .prayer-time {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 7px;
+        color: var(--green);
+        font-weight: bold;
+    }
+    
+    .next-prayer-box h3 {
+        text-align: left;
+        font-size: 6px;
+        margin-bottom: 10px;
+    }
+    
+    .next-prayer-box p {
+        font-size: 7px;
+        margin-bottom: 10px;
+    }
+    
+    .next-prayer-time {
+        font-size: 10px;
+        color: var(--green);
+        font-weight: bold;
+    }
+    }
+    
+    
+    @media screen and (min-width: 1024px) {
+    .prayer-item {
+        background-color: var(--Lightgreen);
+        padding-left: 16.5px;
+        padding-right: 16.5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+    }
+    
+    .prayer-name {
+        font-size: 12px;
+        color: var(--black);
+    }
+    
+    .prayer-time {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 16px;
+        color: var(--green);
+        font-weight: bold;
+    }
+    
+    .next-prayer-box h3 {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .next-prayer-box p {
+        margin-bottom: 10px;
+    }
+    
+    .next-prayer-time {
+        font-size: 24px;
+        color: var(--green);
+        font-weight: bold;
+    }
+    }
