@@ -13,6 +13,7 @@
     --green: #2E7D32;
    --dark-green: #293C36;
    --second-green: #209B6F;
+    --mood-green: #295848;
 
 
 }
@@ -384,6 +385,55 @@ p {
     border-radius: 5px;
 }
 
+.hani{
+    background-color: var(--mood-green);
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    height:30vh;
+    padding-top: 40px;
+    color: var(--white);
+
+    
+}
+
+.hani h1{
+font-size: 26px;
+font-weight: 800;
+padding-bottom: 10px;
+}
+
+.hani p{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.soon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.soon input{
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+
+}
+
+.soon input::placeholder{
+    color: var(--black);
+}
+
+.subscribe{
+    background-color: #269f74;
+    border: 1px solid #269f74;
+    padding: 8px 20px;
+    color: var(--white);
+    border-radius: 20px;
+}
 /* location*/
 .yuusuf {
     background-color:#EFF8F5;
