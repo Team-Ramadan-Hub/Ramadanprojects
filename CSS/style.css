@@ -16,6 +16,65 @@
 
 
 }
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container2 {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: left;
+    color: #295848;
+    margin: 0;
+  }
+  
+  nav {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #295848;
+    text-decoration: underline;
+  }
+  
+  .sign-in {
+    text-align: right;
+  }
+  
+  .sign-in button {
+    padding: 10px 20px;
+    background-color: #295848;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-in button:hover {
+    background-color: #1e3d33;
+  }
+  
 /*Hero section*/
 section{
     display: flex;
