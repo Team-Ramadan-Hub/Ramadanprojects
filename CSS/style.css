@@ -603,3 +603,76 @@ padding-bottom: 10px;
     padding-top: 20px;
 }
 
+.footer-secon{
+    color: var(--white);
+    height: 200px;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-green);
+    justify-content: space-around;
+   align-items: start;
+}
+.footer-hub b{
+ flex-direction: column;
+font-size: 18px;
+font-weight: bold;
+align-items: start;
+padding: 8px;
+}
+
+
+.prag, span{
+ font-size: 14px;
+ display: flex;
+ flex-direction: column;
+ 
+}
+
+.ft-nav{
+    flex-direction: column;
+
+}
+.ft-nav h1{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.ft-nav a{
+    display: flex;
+  justify-content: space-between;
+  color: var(--white);
+font-size: 12px;
+text-decoration: none;
+padding: 6px;
+}
+.source h2{
+    font-size: 18px;
+    font-weight: bold;
+}
+.source p{
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+  font-size: 12px;
+  padding: 6px;
+}
+.connect{
+    padding: 10px;
+    display: flex;
+}
+.connect h4{
+font-size: 18px;
+
+
+}
+
+ .social-icons b{
+    font-size: 12px;
+    padding: 12px;
+}
+
+
+.secfoter{
+    background-color: #1e3d33;
+}
