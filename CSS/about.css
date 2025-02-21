@@ -1,0 +1,135 @@
+/* Team Section */
+.team {
+    padding: 8rem 0;
+    background: var(--white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin: 0 auto 6rem;
+    padding: 0 2rem;
+}
+
+.section-header h2 {
+    font-size: 3.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+
+}
+
+.team-member {
+    text-align: left;
+    background: var(--neutral-50);
+    border-radius: 12px;
+    padding: 1rem;
+ 
+}
+
+
+
+.team-member__image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    
+}
+
+.team-member__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+.team-member h3 {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.team-member .role {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.team-member .bio {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .team__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .section-header h2 {
+        font-size: 2.75rem;
+    }
+
+    .team__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .team {
+        padding: 4rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .team__grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 2rem;
+    }
+
+    .team-member {
+        text-align: center;
+    }
+
+    .team-member__image {
+        max-width: 280px;
+        margin: 0 auto 1.5rem;
+    }
+}
