@@ -623,7 +623,7 @@ padding: 8px;
 
 
 .prag, span{
- font-size: 14px;
+ font-size: 12px;
  display: flex;
  flex-direction: column;
  
@@ -650,7 +650,7 @@ padding: 6px;
     font-size: 18px;
     font-weight: bold;
 }
-.source p{
+.source a{
     display: flex;
     justify-content: space-between;
     color: var(--white);
