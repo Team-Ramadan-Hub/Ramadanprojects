@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const teamMembers = [
   { name: "Hanni", role: "Team Lead", img: "/image/hanni.png" },
   { name: "Mohamud", role: "Team Member", img: "/image/heriImg.jpg" },
@@ -20,7 +19,6 @@ teamMembers.forEach((member) => {
       `;
   teamContainer.appendChild(memberDiv);
 });
-=======
 document.addEventListener("DOMContentLoaded", async function () {
     await fetchPrayerTimes();
 });
@@ -111,4 +109,3 @@ function updateNextPrayer(prayerTimes) {
     const progress = (remainingMinutes / totalTimeBetweenPrayers) * 100;
     document.querySelector(".loading-bar").style.width = `${progress}%`;
 }
->>>>>>> a8465adb31de451935ded1a45f1e247dfbc6ed63
