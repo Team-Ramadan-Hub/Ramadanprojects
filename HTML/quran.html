@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramadan Hub - Your Ramadan Companion</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/CSS/style.css">
+  
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 <body>
-    
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">
+                <i class="fa-regular fa-moon"></i>
+                <span>Ramadan Hub</span>
+            </a>
+
+            <div class="nav__menu">
+                <a href="../HTML/index.html">Home</a>
+                <a href="../HTML/about.html">About Us</a>
+                <a href="../HTML/preyerTime.html">Prayer Times</a>
+                <a href="../HTML/quran.html">Quran</a>
+                <a href="../HTML/mosquit.html">Mosque</a>
+
+                <a href="../HTML/community.html">Community</a>
+            </div>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+                <button class="sign-in-btn">Sign In</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Verse of the Day Section -->
+    <section class="verse" id="verse">
+        <div class="section__header">
+            <h2>Verse of the Day</h2>
+            <p>From Surah Al-Baqarah</p>
+        </div>
+
+        <div class="verse-container">
+            <div class="arabic-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ
+                الرَّحِيمِ</div>
+            <p class="verse-translation">
+                In the name of Allah, the Most Gracious, the Most Merciful
+            </p>
+            <div class="verse-controls">
+                <button class="verse-btn play">
+                    <i class="fas fa-play"></i>
+                    Play Audio
+                </button>
+                <button class="verse-btn share">
+                    <i class="fas fa-share"></i>
+                    Share
+                </button>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
