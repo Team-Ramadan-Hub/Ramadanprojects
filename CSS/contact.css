@@ -1,0 +1,89 @@
+
+ /*contact2.css*/ 
+
+
+
+ .contact-section{
+    width: 1000px;
+    margin: 50px auto;   
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+ 
+ .contact-section h2{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+ }
+
+ .contact-form{
+    margin-bottom: 30px;
+
+ }
+ .form-name{
+    margin-bottom: 15px;
+
+ }
+ .form-name label,input{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+ }
+
+ 
+ .form-sms label,textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ }
+ .form-sms textarea{
+    resize: vertical;
+ }
+
+ .contact-form button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+  
+ 
+  
+  .contact-info h2 {
+   color: #333;
+   text-align: center;
+   margin-bottom: 15px;
+}
+
+.contact-info p {
+   font-size: 16px;
+   color: #555;
+   margin: 10px 0;
+}
+
+.contact-info strong {
+   color: #222;
+}
+
+.contact-info p  {
+   color: #007bff;
+   text-decoration: none;
+}
+
+.contact-info p :hover {
+   text-decoration: underline;
+}
