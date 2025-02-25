@@ -12,7 +12,10 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="/CSS/style.css" />
-      
+        <link rel="stylesheet" href="../CSS/prayer.css">
+        
+        
+         <!--font awesome-->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -21,7 +24,7 @@
         <!-- Header -->
         <header class="header">
             <nav class="nav">
-                <a href="/" class="logo">
+                <a href="../HTML/index.html" class="logo">
                     <i class="fa-regular fa-moon"></i>
                     <span>Ramadan Hub</span>
                 </a>
@@ -108,47 +111,51 @@
             </div>
         </section>
 
-        <!-- Prayer Times Section -->
-        <section class="prayer-times" >
-            <div class="section__header">
-                <h2>Prayer Times</h2>
-                <p>Today's prayer schedule for your location</p>
-            </div>
+          <!-- Prayer Times Section -->
+       <section class="prayer-times" id="prayer-times">
+        <div class="section__header">
+            <h2>Prayer Times</h2>
+            <p>Today's prayer schedule for your location</p>
+        </div>
 
-            <div class="prayer-container">
-                <div class="prayer-box">
-                    <div class="prayer-item">
-                        <span class="prayer-name">Fajr</span>
-                        <span class="prayer-time">5:12 AM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="prayer-name">Dhuhr</span>
-                        <span class="prayer-time">12:30 PM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="prayer-name">Asr</span>
-                        <span class="prayer-time">3:45 PM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="prayer-name">Maghrib</span>
-                        <span class="prayer-time">6:48 PM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="prayer-name">Isha</span>
-                        <span class="prayer-time">8:15 PM</span>
-                    </div>
+        <div class="prayer-container">
+            <div class="prayer-grid">
+                <div class="prayer-card">
+                    <div class="prayer-name"></div>
+                    <div class="prayer-time"></div>
                 </div>
-
-                <div class="next-prayer-box">
-                    <h3>Time Until Next Prayer</h3>
-                    <p>Next Prayer: Asr</p>
-                    <div class="next-prayer-time">02:45:30</div>
-                    <div class="progress-bar">
-                     <div class="loading-bar"></div>
-                    </div>
+                <div class="prayer-card">
+                    <div class="prayer-name"></div>
+                    <div class="prayer-time"></div>
+                </div>
+                <div class="prayer-card">
+                    <div class="prayer-name"></div>
+                    <div class="prayer-time"></div>
+                </div>
+                <div class="prayer-card">
+                    <div class="prayer-name"></div>
+                    <div class="prayer-time"></div>
+                </div>
+                <div class="prayer-card">
+                    <div class="prayer-name"></div>
+                    <div class="prayer-time"></div>
+                </div>
+                <div class="prayer-card">
+                    <div class="prayer-name"></div>
+                    <div class="prayer-time"></div>
                 </div>
             </div>
-        </section>
+
+            <div class="next-prayer">
+                <h3>Time Until Next Prayer</h3>
+                <p>Next Prayer:</p>
+                <div class="countdown"></div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
         <!-- Verse of the Day Section -->
@@ -159,10 +166,8 @@
             </div>
 
             <div class="verse-container">
-                <div class="arabic-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ
-                    الرَّحِيمِ</div>
+                <div class="arabic-text"></div>
                 <p class="verse-translation">
-                    In the name of Allah, the Most Gracious, the Most Merciful
                 </p>
                 <div class="verse-controls">
                     <button class="verse-btn play">
@@ -300,10 +305,10 @@
 
                 <div class="footer__links">
                     <h4>Resources</h4>
-                    <a href="./about.html">About Us</a>
-                    <a href="./blog.html">Blog</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="./contact.html">Contact</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Blog</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact</a>
                 </div>
 
                 <div class="footer__links">
@@ -325,8 +330,10 @@
                 <p>© 2025 Ramadan Hub. All rights reserved.</p>
             </div>
         </footer>
-
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <!-- Scripts -->
-        <script src="/JS/script.js"></script>
+       <script src="../JS/script.js"> 
+
+       </script>
     </body>
 </html>

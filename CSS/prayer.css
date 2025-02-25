@@ -1,0 +1,114 @@
+/* Prayer Times Section */
+.prayer-times {
+    background: var(--emerald-50);
+    padding: 8rem 0;
+}
+
+.prayer-times .section__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.prayer-times .section__header h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.prayer-times .section__header p {
+    color: var(--text-light);
+}
+
+.prayer-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+   
+}
+
+.prayer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+
+    background-color: #FFFFFF;   
+    border-radius: 8px;
+}
+
+.prayer-card {
+    background: var(--emerald-100);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    align-items: center;
+}
+
+.prayer-name {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.prayer-time {
+    color: var(--primary-green);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Next Prayer Card */
+.next-prayer {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.next-prayer h3 {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.next-prayer p {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.countdown {
+    color: var(--primary-green);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--mint-bg);
+    border-radius: 2px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress {
+    width: 60%;
+    height: 100%;
+    background: var(--primary-green);
+    border-radius: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .prayer-container {
+        grid-template-columns: 1fr;
+    }
+    
+}
