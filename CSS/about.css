@@ -1,3 +1,32 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* common styles */
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+:root{
+    --Lightgreen: #EFF8F5;
+    --white:  #fff;
+    --black:  #000;
+    --green: #2E7D32;
+   --dark-green: #293C36;
+   --second-green: #209B6F;
+    --mood-green: #295848;
+   --white-grey: #E2E8F0;
+   --color-grey: #475569;
+
+}
+
 /* Team Section */
 .team {
     padding: 8rem 0;
@@ -13,7 +42,7 @@
 }
 
 .section-header h2 {
-    font-size: 3.5rem;
+    font-size: 2rem;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -22,7 +51,7 @@
 
 .section-header p {
     color: var(--text-light);
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -50,7 +79,7 @@
 .team-member__image {
     width: 100%;
     aspect-ratio: 1;
-    border-radius: 20px;
+    border-radius: 100%;
     overflow: hidden;
     margin-bottom: 1.5rem;
     
@@ -69,6 +98,8 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
+    text-align: center;
+    color: var(--green)
 }
 
 .team-member .role {
@@ -76,6 +107,7 @@
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 0.75rem;
+    text-align: center;
 }
 
 .team-member .bio {
@@ -83,6 +115,7 @@
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    text-align: end;
 }
 
 

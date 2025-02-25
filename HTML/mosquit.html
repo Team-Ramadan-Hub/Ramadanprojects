@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ramadan Hub - Your Ramadan Companion</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ramadan Hub</title>
+    
     <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="/CSS/style.css">
-  
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/about.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+
+    
+    <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="/" class="logo">
+            <a href="../HTML/index.html" class="logo">
                 <i class="fa-regular fa-moon"></i>
                 <span>Ramadan Hub</span>
             </a>
@@ -31,7 +31,7 @@
                 <a href="../HTML/about.html">About Us</a>
                 <a href="../HTML/preyerTime.html">Prayer Times</a>
                 <a href="../HTML/quran.html">Quran</a>
-                <a href="./mosquit.html">Mosque</a>
+                <a href="../HTML/mosquit.html">Mosque</a>
 
                 <a href="../HTML/community.html">Community</a>
             </div>
@@ -44,46 +44,96 @@
             </div>
         </nav>
     </header>
-<!-- Mosque Finder Section -->
-<section class="mosque-finder" id="mosque-finder">
-    <div class="section__header">
-        <h2>Find Nearby Mosques</h2>
-        <p>Locate mosques in your area for prayers and community</p>
-    </div>
 
-    <div class="mosque-container" id="mosque-container">
-        <div class="mosque-list">
-            <input
-                type="text"
-                class="search-input"
-                placeholder="Enter location..."
-                aria-label="Search mosques" />
+    <!-- Mosque Finder Section -->
+    <section class="mosque-finder" id="mosque-finder">
+        <div class="section__header">
+            <h2>Find Nearby Mosques</h2>
+            <p>Locate mosques in your area for prayers and community</p>
+        </div>
 
-            <div class="mosque-card">
-                <h3>Central Mosque</h3>
-                <p class="address">123 Islamic Street</p>
-                <div class="rating">★★★★★</div>
-                <p class="distance">1.5km away</p>
+        <div class="mosque-container" id="mosque-container">
+            <div class="mosque-list">
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Enter location..."
+                    aria-label="Search mosques" />
+
+                <div class="mosque-card">
+                    <h3>Central Mosque</h3>
+                    <p class="address">123 Islamic Street</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="distance">1.5km away</p>
+                </div>
+
+                <div class="mosque-card">
+                    <h3>Community Islamic Center</h3>
+                    <p class="address">456 Prayer Road</p>
+                    <div class="rating">★★★★☆</div>
+                    <p class="distance">2.8km away</p>
+                </div>
             </div>
 
-            <div class="mosque-card">
-                <h3>Community Islamic Center</h3>
-                <p class="address">456 Prayer Road</p>
-                <div class="rating">★★★★☆</div>
-                <p class="distance">2.8km away</p>
+            <div class="mosque-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.192333725999!2d90.40674931492187!3d23.78088749442309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70b72f1b8b7%3A0xdb3ab1712dc8238a!2sDhaka%20University!5e0!3m2!1sen!2sbd!4v1713484800083!5m2!1sen!2sbd"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <h2>
+                    <i class="fa-regular fa-moon"></i>
+                    Ramadan Hub
+                </h2>
+                <p>Your complete companion for the blessed month of
+                    Ramadan</p>
+            </div>
+
+            <div class="footer__links">
+                <h4>Quick Links</h4>
+                <a href="../HTML/preyerTime.html">Prayer Times</a>
+                <a href="../HTML/quran.html">Quran</a>
+                <a href="../HTML/mosquit.html">Find Mosque</a>
+                <a href="../HTML/community.html">Community</a>
+            </div>
+
+            <div class="footer__links">
+                <h4>Resources</h4>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer__links">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
 
-        <div class="mosque-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.192333725999!2d90.40674931492187!3d23.78088749442309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70b72f1b8b7%3A0xdb3ab1712dc8238a!2sDhaka%20University!5e0!3m2!1sen!2sbd!4v1713484800083!5m2!1sen!2sbd"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <div class="footer__bottom">
+            <p>© 2025 Ramadan Hub. All rights reserved.</p>
         </div>
-    </div>
-</section>
-    
+    </footer>
+
 </body>
 </html>
