@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ramadan Hub - Your Ramadan Companion</title>
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="/CSS/signup.css" />
+      
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <i class="fa-regular fa-moon"></i>
+                    <span>Ramadan Hub</span>
+                </a>
+
+                <div class="nav__menu">
+                    <a href="./index.html">Home</a>
+                    <a href="./about.html">About Us</a>
+                    <a href="./preyerTime.html">Prayer Times</a>
+                    <a href="./quran.html">Quran</a>
+                    <a href="./mosquit.html">Mosque</a>
+
+                    <a href="./community.html">Community</a>
+                </div>
+
+                <div class="nav-controls">
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                </div>
+                
+              <a href="./login.html" class="sign-in">Sign In</a>
+                
+            </nav>
+        </header>
+
+    <!----sign-bars-->
+      
+      <div class="sign-container"> 
+        <h2>Register here</h2>
+        <form class="signup-form">
+            <div class="input-name">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-user"> 
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+        <div class="input-pass">
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password" placeholder="inter your password"required>
+        </div>
+        <button type="submit" class="signup-button">Sign Up</button>
+        
+        </form>
+        <p id="toggle-link">Already have an account? <a href="./login.html" id="show-login">Log in</a></p>
+    </div>
+      
+   
+
+    
+        <!-- Scripts -->
+        <script src="/JS/signup.js"></script>
+        </body>
+</html>
