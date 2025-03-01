@@ -95,16 +95,17 @@
  font-size: 18px;
 }
 
-.sign-up {
+.sign-in {
     background: var(--green);
     color: white;
     border: none;
-    padding: 0.625rem 1.25rem;
+    padding: 6px;
     border-radius: 20px;
     font-weight: 500;
-    cursor: pointer;  
+    cursor: pointer;
+    text-decoration: none;
 }
-.sign-up a{
+.sign-in{
     color: white; 
     text-decoration: none;
 }
