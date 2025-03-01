@@ -548,9 +548,10 @@
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: block;
 }
 
-.search-input {
+.searchQuery {
     width: 100%;
     padding: 14px 16px;
     border: 1px solid #E2E8F0;
@@ -601,7 +602,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.mosque-map iframe {
+.mosque-map #map {
     width: 100%;
     height: 100%;
     border: none;
