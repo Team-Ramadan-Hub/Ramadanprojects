@@ -1,3 +1,168 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* common styles */
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+
+
+/* Islamic Design System */
+:root {
+    /* Primary Colors */
+    --emerald-50: #ECFDF5;
+    --emerald-100: #D1FAE5;
+    --emerald-600: #2E7D32;
+    --emerald-700: #047857;
+    --emerald-800: #065F46;
+    
+    /* Accent Colors */
+    --gold-300: #FCD34D;
+    --gold-400: #FBBF24;
+    --gold-500: #F59E0B;
+    
+    /* Neutral Colors */
+    --neutral-50: #F8FAFC;
+    --neutral-100: #F1F5F9;
+    --neutral-200: #E2E8F0;
+    --neutral-600: #475569;
+    --neutral-700: #334155;
+    --neutral-800: #1E293B;
+    
+    /* Shadows & Effects */
+    --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    
+    /* Islamic Patterns */
+    --pattern-light: url('patterns/light-pattern.svg');
+    --pattern-dark: url('patterns/dark-pattern.svg');
+
+    /* Colors - Exact matches from the image */
+    --primary-green: #2A9D8F;
+    --mint-bg: #F1F8F6;
+    --beige: #F5EFE6;
+    --text-dark: #1E293B;
+    --text-light: #64748B;
+
+    --white: #FFFFFF;
+    --primary: #2E8B57;
+    --primary-dark: #247047;
+    --primary-light: #E8F5E9;
+    --neutral-200: #E5E7EB;
+    --neutral-600: #6B7280;
+    --neutral-800: #1F2937;
+}
+:root{
+    --Lightgreen: #EFF8F5;
+    --white:  #fff;
+    --black:  #000;
+    --green: #2E7D32;
+   --dark-green: #293C36;
+   --second-green: #209B6F;
+    --mood-green: #295848;
+   --white-grey: #E2E8F0;
+   --color-grey: #475569;
+
+}
+
+
+
+
+/* Container */
+.container {
+ width: 100%;
+ margin-inline: auto;
+}
+
+
+
+/* Header & Navigation */
+.header {
+    background: var(--white);
+    padding: 16px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo i {
+    color: var(--green);
+    font-size: 20px;
+}
+
+.logo span {
+    color: var(--green);
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Navigation Links */
+.nav__menu {
+    display: flex;
+    gap: 28px;
+}
+
+.nav__menu a {
+    color: var(--color-grey);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+/* Right Controls */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-controls i{
+ font-size: 18px;
+}
+
+
+
+.sign-in-btn {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* Prayer Times Section */
 /* Prayer Times Section */
 .prayer-times {
     background: var(--emerald-50);
@@ -35,7 +200,6 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
     padding: 1rem;
-
     background-color: #FFFFFF;   
     border-radius: 8px;
 }
@@ -99,11 +263,182 @@
 }
 
 .progress {
-    width: 60%;
+    width: 60%; /* Default width, will be dynamically updated by JavaScript */
     height: 100%;
     background: var(--primary-green);
     border-radius: 2px;
+    min-width: 5%; /* Ensures progress bar is always visible, even at low percentages */
 }
+
+.progress {
+    background: linear-gradient(to right, var(--primary-green), #8BC34A); /* Green gradient */
+}
+
+/* Updated: Added subtle shadow for better visibility */
+.progress-bar {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+/* Iftar and Imsak Section */
+.iftar-imsak-container {
+    margin-top: 3rem;
+}
+
+.iftar-imsak-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.iftar-card, .imsak-card {
+    background: var(--emerald-100);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    align-items: center;
+}
+
+.iftar-name, .imsak-name {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.iftar-time, .imsak-time {
+    color: var(--primary-green);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.iftar-countdown, .imsak-countdown {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.iftar-progress-bar, .imsak-progress-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--mint-bg);
+    border-radius: 2px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+/* Updated: Added min-width to ensure progress bar is always visible */
+.iftar-progress, .imsak-progress {
+    width: 60%; /* Default width, will be dynamically updated by JavaScript */
+    height: 100%;
+    background: var(--primary-green);
+    border-radius: 2px;
+    min-width: 5%; /* Ensures progress bar is always visible, even at low percentages */
+}
+
+/* Updated: Added gradient for better visual feedback */
+.iftar-progress {
+    background: linear-gradient(to right, var(--primary-green), #8BC34A); /* Green gradient */
+}
+
+.imsak-progress {
+    background: linear-gradient(to right, var(--primary-green), #8BC34A); /* Green gradient */
+}
+
+/* Updated: Added subtle shadow for better visibility */
+.iftar-progress-bar, .imsak-progress-bar {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+
+/* Footer Section */
+.footer {
+    background: var(--dark-green);
+    padding: 80px 0 40px;
+    color: white;
+}
+
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.footer__brand {
+    display: flex; 
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__brand h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: white;
+}
+
+.footer__brand p {
+    color: var(--white-grey);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer h4 {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer__links a {
+    color: var(--white-grey);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links a {
+    color:var(--black);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer__bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 32px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 64px;
+    text-align: center;
+}
+
+.footer__bottom p {
+    color: var(--white-grey);
+    font-size: 14px;
+}
+
+
+
 
 /* Responsive design */
 @media (max-width: 768px) {
