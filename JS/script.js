@@ -53,7 +53,10 @@ class PrayerTimes {
                         method: 2
                     }
                 }
+
+                
             );
+
 
             // Check if response is successful
             if (response.status === 200) {
@@ -184,6 +187,172 @@ document.addEventListener('DOMContentLoaded', () => {
         new PrayerTimes();
     }
 });
+
+
+// Iftar and Imsak Times Class - Handles Iftar and Imsak functionality
+class iftarImsakTimes {
+    constructor() {
+      // Store DOM elements we need to update
+      this.iftarName = document.querySelector('.iftar-name');
+      this.iftarTime = document.querySelector('.iftar-time');
+      this.iftarCountdown = document.querySelector('.iftar-countdown');
+      this.iftarProgress = document.querySelector('.iftar-progress');
+      this.imsakName = document.querySelector('.imsak-name');
+      this.imsakTime = document.querySelector('.imsak-time');
+      this.imsakCountdown = document.querySelector('.imsak-countdown');
+      this.imsakProgress = document.querySelector('.imsak-progress');
+  
+      // Initialize the app
+      this.init();
+    }
+  
+    // Initialize the app
+    async init() {
+      try {
+        this.setNames(); // Set Iftar and Imsak names in the cards
+        await this.getPrayerTimes(); // Fetch prayer times from API
+        this.startCountdown(); // Start the countdown timer
+      } catch (error) {
+        console.error('Failed to initialize Iftar/Imsak:', error);
+      }
+    }
+  
+    // Set Iftar and Imsak names in the cards
+    setNames() {
+      this.iftarName.textContent = 'Iftar';
+      this.imsakName.textContent = 'Imsak';
+    }
+  
+    // Get prayer times from API using axios
+    async getPrayerTimes() {
+      try {
+        const location = await this.getLocation(); // Get user's location
+        const response = await axios.get(
+          `https://api.aladhan.com/v1/timings/${Math.floor(Date.now() / 1000)}`,
+          {
+            params: {
+              latitude: location.latitude,
+              longitude: location.longitude,
+              method: 2 // Calculation method
+            }
+          }
+        );
+  
+        // Check if response is successful
+        if (response.status === 200) {
+          const timings = response.data.data.timings;
+          this.times = {
+            Imsak: this.formatTimeTo12Hour(timings.Imsak), // Convert to 12-hour format
+            Maghrib: this.formatTimeTo12Hour(timings.Maghrib) // Convert to 12-hour format
+          };
+  
+          // Update Iftar and Imsak times on cards
+          this.iftarTime.textContent = this.times.Maghrib;
+          this.imsakTime.textContent = this.times.Imsak;
+        } else {
+          throw new Error('Failed to fetch prayer times');
+        }
+      } catch (error) {
+        console.error('API Error:', error);
+        throw error;
+      }
+    }
+  
+    // Get user's location (fallback to Mecca if needed)
+    async getLocation() {
+      try {
+        const position = await new Promise((resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(resolve, reject);
+        });
+        return {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
+        };
+      } catch (error) {
+        console.log('Using default location (Mecca)');
+        return { latitude: 21.4225, longitude: 39.8262 }; // Default to Mecca
+      }
+    }
+  
+    // Start the countdown timer
+    startCountdown() {
+      this.updateCountdown(); // Initial update
+      setInterval(() => this.updateCountdown(), 1000); // Update every second
+    }
+  
+    // Update the countdown and progress bar
+    updateCountdown() {
+      const now = new Date();
+  
+      // Update Iftar countdown and progress
+      const maghribTime = this.getPrayerDate(this.times.Maghrib);
+      const iftarDiff = maghribTime - now;
+      if (iftarDiff > 0) {
+        this.iftarCountdown.textContent = this.formatTime(iftarDiff);
+        const fajrTime = this.getPrayerDate(this.times.Imsak); // Imsak is used as Fajr for progress
+        const iftarProgress = ((now - fajrTime) / (maghribTime - fajrTime)) * 100;
+        this.iftarProgress.style.width = `${Math.min(Math.max(iftarProgress, 0), 100)}%`;
+      } else {
+        this.iftarCountdown.textContent = '00:00:00';
+        this.iftarProgress.style.width = '100%';
+      }
+  
+      // Update Imsak countdown and progress
+      const imsakTime = this.getPrayerDate(this.times.Imsak);
+      const imsakDiff = imsakTime - now;
+      if (imsakDiff > 0) {
+        this.imsakCountdown.textContent = this.formatTime(imsakDiff);
+        const midnight = new Date(now);
+        midnight.setHours(0, 0, 0, 0);
+        const imsakProgress = ((now - midnight) / (imsakTime - midnight)) * 100;
+        this.imsakProgress.style.width = `${Math.min(Math.max(imsakProgress, 0), 100)}%`;
+      } else {
+        this.imsakCountdown.textContent = '00:00:00';
+        this.imsakProgress.style.width = '100%';
+      }
+    }
+  
+    // Convert prayer time to a Date object
+    getPrayerDate(timeStr) {
+      const [time, period] = timeStr.split(' '); // Split time and period (AM/PM)
+      const [hours, minutes] = time.split(':');
+      const date = new Date();
+      date.setHours(
+        period === 'PM' && hours !== '12' ? parseInt(hours) + 12 : parseInt(hours), // Convert to 24-hour format
+        parseInt(minutes),
+        0,
+        0
+      );
+      return date;
+    }
+  
+    // Format time difference as HH:MM:SS
+    formatTime(diff) {
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+  
+    // Convert 24-hour time to 12-hour format
+    formatTimeTo12Hour(timeStr) {
+      const [hours, minutes] = timeStr.split(':');
+      const date = new Date();
+      date.setHours(parseInt(hours), parseInt(minutes), 0, 0);
+      return date.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      });
+    }
+  }
+  
+  // Start the Iftar/Imsak app when the DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.iftar-imsak-container')) {
+      new iftarImsakTimes();
+    }
+  });
 
 // Mobile Menu Toggle (keep existing code)
 class MobileMenu {
