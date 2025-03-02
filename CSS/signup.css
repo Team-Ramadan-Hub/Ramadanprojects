@@ -22,15 +22,12 @@
 
 
 
-/* Container */
 .container {
  width: 100%;
  margin-inline: auto;
 }
 
 
-
-/* Header & Navigation */
 .header {
     background: var(--white);
     padding: 16px 0;
@@ -50,7 +47,6 @@
     height: 64px;
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -69,7 +65,6 @@
     font-weight: 600;
 }
 
-/* Navigation Links */
 .nav__menu {
     display: flex;
     gap: 28px;
@@ -82,9 +77,6 @@
     font-weight: 500;
 }
 
-
-
-/* Right Controls */
 .nav-controls {
     display: flex;
     align-items: center;
@@ -99,75 +91,191 @@
     background: var(--green);
     color: white;
     border: none;
-    padding: 0.625rem 1.25rem;
+    padding: 10px 20px;
     border-radius: 20px;
     font-weight: 500;
-    cursor: pointer;  
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.sign-up:hover {
+    background: var(--dark-green);
+}
+
 .sign-up a{
     color: white; 
     text-decoration: none;
 }
 
 
+.user-profile {
+    position: relative;
+    display: none;
+}
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-grey);
+}
+
+.profile-button img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--green);
+}
+
+.profile-button span {
+    font-weight: 500;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    display: none;
+    z-index: 1000;
+}
+
+.profile-dropdown.active {
+    display: block;
+}
+
+.profile-dropdown a, 
+.profile-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    text-align: left;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--color-grey);
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.profile-dropdown a:hover, 
+.profile-dropdown button:hover {
+    background-color: var(--Lightgreen);
+}
+
+.logout-button {
+    margin-top: 8px;
+    border-top: 1px solid var(--white-grey) !important;
+    padding-top: 12px !important;
+    color: #e53935 !important;
+}
+
 .sign-container {
     display: flex;
-    background:var(--white-grey);
+    background: linear-gradient(135deg, var(--Lightgreen) 0%, var(--white) 100%);
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-  }
-  
-  .signup-form{
-    display: flex;
-   width: 400px;
-    background-color:var(--Lightgreen);
     align-items: center;
-   flex-direction: column;
-   align-items: stretch;
- 
-  }
-  
-    h2 {
-        color: #333;
-        margin-bottom: 15px;
-
-    
-  }
-  .input-name, .input-user, .input-pass {
-    margin-bottom: 15px;
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
 }
+  
+.signup-form{
+    display: flex;
+    width: 400px;
+    background-color: white;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+  
+h2 {
+    color: var(--green);
+    margin-bottom: 24px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.input-name, .input-user, .input-pass {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
 label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--color-grey);
+    font-size: 14px;
 }
+
 input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 5px;
+    padding: 12px 16px;
+    border: 1px solid var(--white-grey);
+    border-radius: 8px;
     font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--Lightgreen);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
 }
 
 .signup-button {
     width: 100%;
-    padding: 10px;
-    background-color: blue;
+    padding: 12px;
+    background-color: var(--green);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 .signup-button:hover {
-    background-color: #0056b3;
+    background-color: var(--dark-green);
+}
+
+#toggle-link {
+    margin-top: 20px;
+    color: var(--color-grey);
+    font-size: 14px;
+}
+
+#toggle-link a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#toggle-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .signup-form {
+        width: 100%;
+        max-width: 340px;
+        padding: 20px;
+    }
 }

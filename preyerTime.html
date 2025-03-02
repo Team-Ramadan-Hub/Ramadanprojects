@@ -10,10 +10,12 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="../CSS/style.css" />
-        <link rel="stylesheet" href="../CSS/prayer.css" />
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <link rel="stylesheet" href="./CSS/prayer.css" />
+        <link rel="stylesheet" href="./CSS/navigation.css" />
         
     </head>
 <body>
@@ -24,6 +26,11 @@
                     <i class="fa-regular fa-moon"></i>
                     <span>Ramadan Hub</span>
                 </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
 
                 <div class="nav__menu">
                     <a href="/">Home</a>
@@ -40,7 +47,23 @@
                     <button class="theme-toggle" aria-label="Toggle dark mode">
                         <i class="fa-regular fa-moon"></i>
                     </button>
-                    <a href="./login.html" class="sign-in">Sign In</a>
+                </div>
+                
+                <!-- Sign In Link (visible when logged out) -->
+                <a href="./login.html" class="sign-in" id="sign-in-link">Sign In</a>
+                
+                <!-- User Profile (visible when logged in) -->
+                <div class="user-profile" id="user-profile">
+                    <button class="profile-button" id="profile-button">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <span id="username-display">Username</span>
+                    </button>
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="./profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+                        <button class="logout-button" id="logout-button">
+                            <i class="fa-solid fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -109,10 +132,10 @@
 
                 <div class="footer__links">
                     <h4>Quick Links</h4>
-                    <a href="../HTML/preyerTime.html">Prayer Times</a>
-                    <a href="../HTML/quran.html">Quran</a>
-                    <a href="../HTML/mosquit.html">Find Mosque</a>
-                    <a href="../HTML/community.html">Community</a>
+                    <a href="./preyerTime.html">Prayer Times</a>
+                    <a href="./quran.html">Quran</a>
+                    <a href="./mosquit.html">Find Mosque</a>
+                    <a href="./community.html">Community</a>
                 </div>
 
                 <div class="footer__links">
@@ -139,12 +162,14 @@
 </div>
 
             <div class="footer__bottom">
-                <p>© 2025 Ramadan Hub. All rights reserved.</p>
+                <p> 2025 Ramadan Hub. All rights reserved.</p>
             </div>
         </footer>
 
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="../JS/script.js"></script>
+        <script src="./JS/script.js"></script>
+        <script src="./JS/common.js"></script>
+        <script src="./JS/navigation.js"></script>
 </body>
 </html>

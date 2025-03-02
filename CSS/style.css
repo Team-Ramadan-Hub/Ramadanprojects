@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-/* common styles */
-
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -12,8 +10,6 @@
 }
 
 
-
-/* Islamic Design System */
 :root {
     /* Primary Colors */
     --emerald-50: #ECFDF5;
@@ -44,7 +40,7 @@
     --pattern-light: url('patterns/light-pattern.svg');
     --pattern-dark: url('patterns/dark-pattern.svg');
 
-    /* Colors - Exact matches from the image */
+    /* Colors  */
     --primary-green: #2A9D8F;
     --mint-bg: #F1F8F6;
     --beige: #F5EFE6;
@@ -64,26 +60,60 @@
     --white:  #fff;
     --black:  #000;
     --green: #2E7D32;
-   --dark-green: #293C36;
-   --second-green: #209B6F;
+    --dark-green: #293C36;
+    --second-green: #209B6F;
     --mood-green: #295848;
-   --white-grey: #E2E8F0;
-   --color-grey: #475569;
-
+    --white-grey: #E2E8F0;
+    --color-grey: #475569;
+    
+    /* Dark mode variables */
+    --dark-bg: #1a1a1a;
+    --dark-card: #2d2d2d;
+    --dark-text: #f5f5f5;
+    --dark-accent: #60ad5e;
+    --dark-border: #444;
+    --dark-input: #333;
 }
 
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
 
+body.dark-mode .card,
+body.dark-mode .container-card,
+body.dark-mode .section-card {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--dark-text);
+}
 
-/* Container */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: var(--dark-input);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+body.dark-mode a {
+    color: var(--dark-accent);
+}
+
 .container {
  width: 100%;
  margin-inline: auto;
 }
 
-
-
-/* Header & Navigation */
 .header {
     background: var(--white);
     padding: 16px 0;
@@ -103,7 +133,6 @@
     height: 60px;
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -122,7 +151,6 @@
     font-weight: 600;
 }
 
-/* Navigation Links */
 .nav__menu {
     display: flex;
     gap: 28px;
@@ -136,8 +164,6 @@
 }
 
 
-
-/* Right Controls */
 .nav-controls {
     display: flex;
     align-items: center;
@@ -163,7 +189,6 @@
 
 
 
-/* Hero Section */
 .hero {
  background: var(--Lightgreen);
  padding: 80px 0;
@@ -244,7 +269,6 @@
   
 }
 
-/* Features Section */
 .features {
     padding: 80px 0;
     background: white;
@@ -380,7 +404,6 @@
     font-weight: bold;
 }
 
-/* Next Prayer Card */
 .next-prayer {
     background-color: #FFFFFF;
     padding: 1.5rem;
@@ -423,16 +446,13 @@
     border-radius: 2px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .prayer-container {
         grid-template-columns: 1fr;
     }
     
 }
-    
-
-/* Verse of the Day Section */
+ 
 .verse {
     padding: 4rem 0;
     background: var(--white);
@@ -508,7 +528,7 @@
     border: 1px solid var(--green);
   }
 
-  /* location */
+
 .mosque-finder {
     padding: 8rem 0;
     background: var(--Lightgreen);
@@ -612,10 +632,9 @@
    
 }
 
-/* Community Events Section */
 .live-stream-section {
     width: 100%;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     padding: 20px;
     margin-right: 20px;
     background-color: var(--Lightgreen);
@@ -632,7 +651,7 @@
   
   .video-wrapper {
     position: relative;
-    padding-bottom: 400px; /* 16:9 aspect ratio */
+    padding-bottom: 400px; 
     height: 0;
     overflow: hidden;
     border-radius: 8px;
@@ -647,8 +666,6 @@
     border: none;
   }
 
-
-/* Newsletter Section */
 .newsletter {
     background: var(--mood-green);
     padding: 80px 0;
@@ -705,93 +722,127 @@
 
 
 
-/* Footer Section */
 .footer {
-    background: var(--dark-green);
-    padding: 80px 0 40px;
+    background-color: var(--primary-dark);
     color: white;
+    padding: 0;
+    margin-top: 60px;
 }
 
 .footer__content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 32px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
-}
-
-.footer__brand {
-    display: flex; 
-    flex-direction: column;
-    gap: 16px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 .footer__brand h2 {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 20px;
-    color: white;
+    gap: 10px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .footer__brand p {
-    color: var(--white-grey);
-    font-size: 14px;
     line-height: 1.6;
-}
-
-.footer h4 {
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
     margin-bottom: 20px;
 }
 
-.footer__links a {
-    color: var(--white-grey);
-    text-decoration: none;
-    font-size: 14px;
-    display: block;
-    margin-bottom: 12px;
+.footer__links {
+    display: flex;
+    flex-direction: column;
 }
 
+.footer__links h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
 
+.footer__links h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-light);
+}
+
+.footer__links a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer__links a:hover {
+    color: var(--primary-light);
+}
 
 .social-links {
     display: flex;
-    gap: 16px;
+    gap: 15px;
 }
 
 .social-links a {
-    color:var(--black);
-    font-size: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+.social-links a:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-3px);
+}
 
 .footer__bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px 32px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 64px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
     text-align: center;
 }
 
-.footer__bottom p {
-    color: var(--white-grey);
-    font-size: 14px;
+
+@media (max-width: 992px) {
+    .footer__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+@media (max-width: 576px) {
+    .footer__content {
+        grid-template-columns: 1fr;
+    }
+}
 
+body.dark-mode .footer {
+    background-color: var(--dark-card);
+}
 
+body.dark-mode .footer__links h4::after {
+    background-color: var(--dark-accent);
+}
 
-/* All Resposonsive */
+body.dark-mode .footer__links a:hover {
+    color: var(--dark-accent);
+}
 
-/* Responsive Design Hero */
+body.dark-mode .social-links a:hover {
+    background-color: var(--dark-accent);
+}
+
 @media (max-width: 768px) {
     .hero__content {
         grid-template-columns: 1fr;
@@ -815,8 +866,6 @@
         display: none;
     }
 }
-
-/*  resposnsive featerure section*/
 
 @media (max-width: 1024px) {
     .features-grid {
@@ -844,7 +893,6 @@
     }
 }
 
-/* responsive prayer time */
 
 @media (max-width: 768px) {
     .prayer-container {
@@ -853,9 +901,6 @@
     
 }
 
-
-
-/* Responsive design coummunity */
 @media (max-width: 768px) {
     .events-grid {
         grid-template-columns: 1fr;
@@ -869,7 +914,6 @@
     }
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .events-grid {
         grid-template-columns: 1fr;
@@ -882,8 +926,6 @@
     
     
 }
-
-/* resposnive footer */
 
 @media (max-width: 768px) {
     .footer__content {

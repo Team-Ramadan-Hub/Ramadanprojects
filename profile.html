@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Profile - Ramadan Hub</title>
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <link rel="stylesheet" href="./CSS/profile.css" />
+        <link rel="stylesheet" href="./CSS/navigation.css" />
+        
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <i class="fa-regular fa-moon"></i>
+                    <span>Ramadan Hub</span>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="nav__menu">
+                    <a href="./index.html">Home</a>
+                    <a href="./about.html">About Us</a>
+                    <a href="./preyerTime.html">Prayer Times</a>
+                    <a href="./quran.html">Quran</a>
+                    <a href="./mosquit.html">Mosque</a>
+                    <a href="./community.html">Community</a>
+                </div>
+
+                <div class="nav-controls">
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                </div>
+                
+                <!-- Sign In Link (visible when logged out) -->
+                <a href="./login.html" class="sign-in" id="sign-in-link">Sign In</a>
+                
+                <!-- User Profile (visible when logged in) -->
+                <div class="user-profile" id="user-profile">
+                    <button class="profile-button" id="profile-button">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <span id="username-display">Username</span>
+                    </button>
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="./profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+                        <button class="logout-button" id="logout-button">
+                            <i class="fa-solid fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="profile-container">
+            <section class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user-circle"></i>
+                </div>
+                <h1 id="profile-name">User Name</h1>
+                <p id="profile-username">@username</p>
+                <p id="profile-joined">Joined: <span id="join-date">March 2025</span></p>
+            </section>
+
+            <section class="profile-details">
+                <div class="profile-card">
+                    <h2>Profile Information</h2>
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value" id="info-name">User Name</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Username:</span>
+                            <span class="info-value" id="info-username">username</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Account Created:</span>
+                            <span class="info-value" id="info-created">March 2, 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h2>Ramadan Activities</h2>
+                    <div class="activity-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-book-open"></i>
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">Quran Pages</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-hands-praying"></i>
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">Prayers</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-mosque"></i>
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">Mosque Visits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h2>Account Actions</h2>
+                    <div class="account-actions">
+                        <button id="edit-profile-button" class="action-button">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                        <button id="logout-profile-button" class="action-button danger">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>About Ramadan Hub</h3>
+                    <p>Your complete companion for the holy month of Ramadan.</p>
+                </div>
+                <div class="footer__section">
+                    <h3>Quick Links</h3>
+                    <a href="./index.html">Home</a>
+                    <a href="./about.html">About Us</a>
+                    <a href="./preyerTime.html">Prayer Times</a>
+                    <a href="./quran.html">Quran</a>
+                </div>
+                <div class="footer__section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p> 2025 Ramadan Hub. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="./JS/profile.js"></script>
+        <script src="./JS/common.js"></script>
+        <script src="./JS/navigation.js"></script>
+    </body>
+</html>
