@@ -10,7 +10,6 @@
 ✅ **Fasting Schedule** – Suhoor & Iftar times for better fasting management  
 ✅ **Quran & Tafsir** – Read & understand the Quran with explanations  
 ✅ **Live Taraweeh Streaming** – Watch live Taraweeh prayers from Makkah & Madinah  
-✅ **Zakat Calculator** – Easily calculate your Zakat  
 ✅ **Community Events** – Find local Iftar gatherings and Ramadan activities  
 
 
