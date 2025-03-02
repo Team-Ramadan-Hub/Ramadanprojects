@@ -21,12 +21,14 @@
   - [Hadith API](https://api.hadith.gading.dev) (for daily Hadith)  
   - [Aladhan API](https://aladhan.com/prayer-times-api) (for prayer times)  
   - [Quran API](https://alquran.cloud/api) (for Quran & Tafsir)  
-  - **Live Streaming:** YouTube API / Custom RTMP Stream  
+  - **Live Streaming:** YouTube  / Custom RTMP Stream  
 
 ## 🚀 Installation & Setup  
 
 1️⃣ **Clone the repository**  
 git clone https://github.com/yourusername/ramadan-hub.git
 cd ramadan-hub
+##Demo Ramadan Hub 
+https://gorgeous-bombolone-9f8122.netlify.app/
 
 
