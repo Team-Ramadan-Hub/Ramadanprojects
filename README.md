@@ -7,7 +7,7 @@
 
 ✅ **Daily Hadith** – Authentic Hadith 
 ✅ **Prayer Times** – Accurate prayer timings based on your location  
-✅ **Fasting Schedule** – Suhoor & Iftar times for better fasting management  
+✅ **Fasting Schedule** – Imsak & Iftar times for better fasting management  
 ✅ **Quran & Tafsir** – Read & understand the Quran with explanations  
 ✅ **Live Taraweeh Streaming** – Watch live Taraweeh prayers from Makkah & Madinah  
 ✅ **Community Events** – Find local Iftar gatherings and Ramadan activities  
@@ -18,7 +18,7 @@
 - **Frontend:** HTML, CSS, JavaScript.
 - **APIs Used:**  
   - [Hadith API](https://api.hadith.gading.dev) (for daily Hadith)  
-  - [Aladhan API](https://aladhan.com/prayer-times-api) (for prayer times)  
+  - [Aladhan API](https://aladhan.com/prayer-times-api) (for prayer, Imsak & Iftar times)  
   - [Quran API](https://alquran.cloud/api) (for Quran & Tafsir)  
   - **Live Streaming:** YouTube  / Custom RTMP Stream  
 
