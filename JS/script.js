@@ -310,3 +310,29 @@ document.addEventListener('DOMContentLoaded', () => {
         new VerseOfTheDay();
     }
 });
+
+
+// Function to get a random Hadith
+async function getHadith() {
+    try {
+        let response = await fetch("https://api.hadith.gading.dev/books/bukhari?range=1-100");
+        let data = await response.json();
+
+        // Get a random Hadith
+        let hadiths = data.data.hadiths;
+        let randomIndex = Math.floor(Math.random() * hadiths.length);
+        let hadithText = hadiths[randomIndex].arab;
+        let hadithRef = `Book: Bukhari, Hadith No: ${hadiths[randomIndex].number}`;
+
+    
+        document.getElementById("hadith").innerText = hadithText;
+        document.getElementById("reference").innerText = hadithRef;
+    } catch (error) {
+        console.error("Error fetching Hadith:", error);
+        document.getElementById("hadith").innerText = "Failed to fetch Hadith. Try again.";
+        document.getElementById("reference").innerText = "";
+    }
+}
+
+
+window.onload = getHadith;

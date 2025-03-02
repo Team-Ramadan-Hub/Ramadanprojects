@@ -528,6 +528,31 @@ body.dark-mode a {
     border: 1px solid var(--green);
   }
 
+  /*hadith section*/
+    
+  .hadith-container{
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+
+.hadith-text {
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    color: var(--emerald-600);
+    
+}
+.reference {
+    font-style: italic;
+    color: #555;
+}
+
 
 .mosque-finder {
     padding: 8rem 0;
