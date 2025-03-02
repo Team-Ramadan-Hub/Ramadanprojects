@@ -1,0 +1,226 @@
+
+.verse {
+    margin-top: 100px;
+    padding: 40px 20px;
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section__header h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section__header p {
+    color: var(--text-color);
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.verse-container {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+.verse-arabic {
+    font-family: 'Scheherazade New', serif;
+    font-size: 32px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    direction: rtl;
+}
+
+.verse-translation {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.verse-reference {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.quran-search {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.search-form button:hover {
+    background-color: var(--primary-dark);
+}
+
+.quran-navigation {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.surah-select, .juz-select {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.surah-select select, .juz-select select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--card-background);
+}
+
+.quran-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.quran-ayah {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.quran-ayah:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.ayah-arabic {
+    font-family: 'Scheherazade New', serif;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    direction: rtl;
+}
+
+.ayah-translation {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.ayah-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.audio-player {
+    max-width: 800px;
+    margin: 40px auto 0;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.audio-player h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.audio-controls {
+    width: 100%;
+}
+
+body.dark-mode .verse-container,
+body.dark-mode .quran-content,
+body.dark-mode .audio-player {
+    background-color: var(--dark-card);
+    border-color: var(--dark-border);
+}
+
+body.dark-mode .verse-translation,
+body.dark-mode .ayah-translation {
+    color: var(--dark-text);
+}
+
+body.dark-mode .verse-reference {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .surah-select select,
+body.dark-mode .juz-select select {
+    background-color: var(--dark-input);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+@media (max-width: 768px) {
+    .verse-arabic {
+        font-size: 28px;
+    }
+    
+    .verse-translation {
+        font-size: 16px;
+    }
+    
+    .quran-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .surah-select, .juz-select {
+        margin: 0;
+    }
+    
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .section__header h2 {
+        font-size: 28px;
+    }
+}

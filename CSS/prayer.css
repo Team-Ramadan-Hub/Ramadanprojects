@@ -1,4 +1,4 @@
-/* Prayer Times Section */
+
 .prayer-times {
     background: var(--emerald-50);
     padding: 8rem 0;
@@ -62,7 +62,6 @@
     font-weight: bold;
 }
 
-/* Next Prayer Card */
 .next-prayer {
     background-color: #FFFFFF;
     padding: 1.5rem;
@@ -105,7 +104,6 @@
     border-radius: 2px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .prayer-container {
         grid-template-columns: 1fr;

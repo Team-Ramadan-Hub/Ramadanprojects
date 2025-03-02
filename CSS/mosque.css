@@ -1,0 +1,203 @@
+
+.mosque-finder {
+    margin-top: 100px;
+    padding: 40px 20px;
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section__header h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section__header p {
+    color: var(--text-color);
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mosque-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.mosque-list {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
+}
+
+.mosque-card {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.mosque-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.mosque-card h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.mosque-card .address {
+    color: var(--text-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mosque-card .address::before {
+    content: '\f3c5';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.mosque-card .rating {
+    color: #FFD700;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.mosque-card .distance {
+    color: var(--text-color);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mosque-card .distance::before {
+    content: '\f5a0';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.mosque-map {
+    height: 600px;
+    overflow: hidden;
+}
+
+.mosque-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+body.dark-mode .mosque-container {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .mosque-list {
+    background-color: var(--dark-card);
+}
+
+body.dark-mode .search-input {
+    background-color: var(--dark-input);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+body.dark-mode .mosque-card {
+    background-color: var(--dark-card);
+    border-color: var(--dark-border);
+}
+
+body.dark-mode .mosque-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .mosque-card h3 {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .mosque-card .address,
+body.dark-mode .mosque-card .distance {
+    color: var(--dark-text);
+}
+
+body.dark-mode .mosque-card .address::before,
+body.dark-mode .mosque-card .distance::before {
+    color: var(--dark-accent);
+}
+
+@media (max-width: 992px) {
+    .mosque-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .mosque-list {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        max-height: 400px;
+    }
+    
+    .mosque-map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section__header h2 {
+        font-size: 28px;
+    }
+    
+    .mosque-list {
+        padding: 20px;
+    }
+    
+    .mosque-card {
+        padding: 15px;
+    }
+}

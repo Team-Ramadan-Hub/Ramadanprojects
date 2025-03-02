@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ramadan Hub - Your Ramadan Companion</title>
 
-        <!-- Fonts -->
+  
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet" />
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="/CSS/signup.css" />
+
+        <link rel="stylesheet" href="./CSS/signup.css" />
+        <link rel="stylesheet" href="./CSS/navigation.css" />
       
         <link
             rel="stylesheet"
@@ -25,6 +26,11 @@
                     <i class="fa-regular fa-moon"></i>
                     <span>Ramadan Hub</span>
                 </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
 
                 <div class="nav__menu">
                     <a href="./index.html">Home</a>
@@ -42,7 +48,21 @@
                     </button>
                 </div>
                 
-              <a href="./login.html" class="sign-in">Sign In</a>
+              <a href="./login.html" class="sign-in" id="sign-in-link">Sign In</a>
+                
+              <!-- User Profile (visible when logged in) -->
+              <div class="user-profile" id="user-profile">
+                  <button class="profile-button" id="profile-button">
+                      <i class="fa-solid fa-user-circle"></i>
+                      <span id="username-display">Username</span>
+                  </button>
+                  <div class="profile-dropdown" id="profile-dropdown">
+                      <a href="./profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+                      <button class="logout-button" id="logout-button">
+                          <i class="fa-solid fa-sign-out-alt"></i> Logout
+                      </button>
+                  </div>
+              </div>
                 
             </nav>
         </header>
@@ -75,6 +95,8 @@
 
     
         <!-- Scripts -->
-        <script src="/JS/signup.js"></script>
+        <script src="./JS/signup.js"></script>
+        <script src="./JS/common.js"></script>
+        <script src="./JS/navigation.js"></script>
         </body>
 </html>
