@@ -440,10 +440,95 @@ body.dark-mode a {
 }
 
 .progress {
-    width: 60%;
+    width: 60%; /* Default width, will be dynamically updated by JavaScript */
     height: 100%;
     background: var(--primary-green);
     border-radius: 2px;
+    min-width: 5%; /* Ensures progress bar is always visible, even at low percentages */
+}
+
+.progress {
+    background: linear-gradient(to right, var(--primary-green), #8BC34A); /* Green gradient */
+}
+
+/* Updated: Added subtle shadow for better visibility */
+.progress-bar {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+/* Iftar and Imsak Section */
+.iftar-imsak-container {
+    margin-top: 3rem;
+}
+
+.iftar-imsak-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.iftar-card, .imsak-card {
+    background: var(--emerald-100);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    align-items: center;
+}
+
+.iftar-name, .imsak-name {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.iftar-time, .imsak-time {
+    color: var(--primary-green);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.iftar-countdown, .imsak-countdown {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.iftar-progress-bar, .imsak-progress-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--mint-bg);
+    border-radius: 2px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+/* Updated: Added min-width to ensure progress bar is always visible */
+.iftar-progress, .imsak-progress {
+    width: 60%; /* Default width, will be dynamically updated by JavaScript */
+    height: 100%;
+    background: var(--primary-green);
+    border-radius: 2px;
+    min-width: 5%; /* Ensures progress bar is always visible, even at low percentages */
+}
+
+/* Updated: Added gradient for better visual feedback */
+.iftar-progress {
+    background: linear-gradient(to right, var(--primary-green), #8BC34A); /* Green gradient */
+}
+
+.imsak-progress {
+    background: linear-gradient(to right, var(--primary-green), #8BC34A); /* Green gradient */
+}
+
+/* Updated: Added subtle shadow for better visibility */
+.iftar-progress-bar, .imsak-progress-bar {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 @media (max-width: 768px) {
